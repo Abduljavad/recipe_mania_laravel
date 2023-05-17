@@ -1,0 +1,27 @@
+.body-container {
+    display: flex;
+}
+.main-section {
+    /* background-color: red; */
+    flex-grow: 100%;
+    padding: 10px;
+    padding-right: 30px;
+    
+}
+
+.sidebar-section {
+    /* background-color: blue; */
+    flex-basis: 25%;
+    padding-left: 10px;
+}
+#ingredient,
+#category_id,
+#cuisine_id,
+#difficulty_level_id.form-control {
+    width: 150px;
+}
+.product-details{
+    flex-grow: 100%;
+    padding: 10px;
+    padding-right: 30px;
+}
