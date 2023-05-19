@@ -3,7 +3,7 @@
 }
 .main-section {
     /* background-color: red; */
-    flex-grow: 100%;
+    flex-grow: 1;
     padding: 10px;
     padding-right: 30px;
     
