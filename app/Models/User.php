@@ -73,4 +73,9 @@ class User extends Authenticatable
     {
         return $this->savedItems()->where('recipe_id', $recipe->id)->exists();
     }
+
+    public function isSuperAdmin()
+    {
+        return $this->hasRole('super_admin');
+    }
 }

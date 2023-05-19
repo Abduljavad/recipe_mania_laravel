@@ -33,6 +33,7 @@ class HomeController extends Controller
             ->byCuisine($request)
             ->byName($request)
             ->byDifficulty($request)
+            ->where('status','like','%approved%')
             ->get();
 
         $categories = Category::all();
