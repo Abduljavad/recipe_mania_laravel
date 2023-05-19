@@ -19,7 +19,7 @@ class AdminSeeder extends Seeder
             ['name' => 'super_admin'],
             [
                 'password' => bcrypt('password'),
-                'email' => 'admin@minnalapp.com',
+                'email' => 'admin@recipemania.com',
             ]
         );
         $super_admin->assignRole('super_admin');
