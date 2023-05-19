@@ -10,6 +10,10 @@ use App\Models\SavedItem;
 
 class SavedItemController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -24,16 +28,6 @@ class SavedItemController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\StoreSavedItemRequest  $request
@@ -44,39 +38,6 @@ class SavedItemController extends Controller
         auth()->user()->savedItems()->create(['recipe_id' => $recipe->id]);
 
         return redirect()->back()->with('msg', 'Item Saved');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\SavedItem  $savedItem
-     * @return \Illuminate\Http\Response
-     */
-    public function show(SavedItem $savedItem)
-    {
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\SavedItem  $savedItem
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(SavedItem $savedItem)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateSavedItemRequest  $request
-     * @param  \App\Models\SavedItem  $savedItem
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateSavedItemRequest $request, SavedItem $savedItem)
-    {
-        //
     }
 
     /**
